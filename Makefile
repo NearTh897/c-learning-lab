@@ -18,3 +18,5 @@ main.o: main.c
 # Limpa os arquivos gerados
 clean:
 	rm -f $(TARGET) *.o
+
+

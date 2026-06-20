@@ -1,5 +1,15 @@
-.swp
-.swo
-~
+# Executáveis e objetos
+bin/
+build/
+*.o
+*.out
+*.exe
+
+# Dados pessoais (se houver)
+*.swp
+*.swo
+*~
+
+# IDE
 .vscode/
 .idea/
