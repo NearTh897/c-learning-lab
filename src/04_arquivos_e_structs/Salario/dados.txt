@@ -1,0 +1,10 @@
+3
+101
+Ana Silva
+2500.00
+102
+Joao Souza
+1800.00
+103
+Maria Costa
+3200.00
