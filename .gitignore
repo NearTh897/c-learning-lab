@@ -5,7 +5,7 @@ build/
 *.out
 *.exe
 
-# Dados pessoais (se houver)
+# Dados pessoais
 *.swp
 *.swo
 *~
@@ -13,3 +13,5 @@ build/
 # IDE
 .vscode/
 .idea/
+
+.gitignore

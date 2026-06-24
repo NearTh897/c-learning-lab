@@ -1,0 +1,32 @@
+
+---
+
+## 5. O Makefile — Compilação Automática
+
+```makefile
+# Compilador e flags
+CC = gcc
+CFLAGS = -std=c11 -Wall -Wextra -Wpedantic
+SRC_DIR = src
+BIN_DIR = bin
+
+# Lista de targets (nome do executável = nome do .c sem extensão)
+TARGETS = $(patsubst %.c,%,$(notdir $(wildcard $(SRC_DIR)/*/*.c)))
+
+# Regra padrão: compilar tudo
+all: $(TARGETS)
+
+# Regra genérica para cada arquivo
+%: $(SRC_DIR)/*/%.c
+	@mkdir -p $(BIN_DIR)
+	$(CC) $(CFLAGS) $< -o $(BIN_DIR)/$@
+
+# Rodar um exemplo específico
+run-%: %
+	./$(BIN_DIR)/$<<
+
+# Limpar
+clean:
+	rm -rf $(BIN_DIR)
+
+.PHONY: all clean run-%
